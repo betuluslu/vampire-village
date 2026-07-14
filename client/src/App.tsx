@@ -1,6 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import RoomPage from "./pages/RoomPage";
+
 function App() {
   return (
-    <h1>Vampire Village</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/room/:roomId" element={<RoomPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
